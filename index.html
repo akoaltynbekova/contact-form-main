@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="description" content="Contact us form">
+
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="exp.css">
+
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+  <main>
+    <form id="form">
+      <header>
+        <p>Contact Us</p>
+      </header>
+      <section class="user-details">
+        <div>
+          <label for="name">First Name <span>*</span></label>
+          <input type="text" name="name" id="name" autocomplete="given-name">
+          <p class="error-name">This field is required</p>
+        </div>
+
+        <div>
+          <label for="surname">Last Name <span>*</span></label>
+          <input type="text" name="surname" id="surname" autocomplete="family-name">
+          <p class="error-surname">This field is required</p>
+        </div>
+      </section>
+
+      <section class="user-email">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" name="email" id="email" autocomplete="email">
+        <p class="error-email">Please enter a vaild email address</p>
+      </section>
+
+      <fieldset>
+        <legend>Query Type <span>*</span></legend>
+          <div class="radio-btn">
+            <input type="radio" name="query-type" id="general-enquiry">
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+        
+          <div class="radio-btn">
+            <input type="radio" name="query-type" id="support-request">
+            <label for="support-request">Support Request</label>
+          </div>
+
+      </fieldset>
+      <p class="error-query">Please select a query type</p>
+
+
+      <section class="message">
+        <label for="user-message">Message <span>*</span></label>
+        <textarea name="user-message" id="user-message"></textarea>
+        <p class="error-message">This field is required</p>
+      </section>
+
+      <section class="consent">
+        <div class="consent-box">
+          <input type="checkbox" name="terms-condition" id="terms-condition">
+        <label for="terms-condition" id="terms-condition">
+          I consent to being contacted by the team <span>*</span>
+        </label>
+        </div>
+        
+        <p class="error-consent">To submit this form, please consent to being contacted</p>
+        
+      </section>
+      <footer>
+        <button>Submit</button>
+      </footer>
+    </form>
+
+    <section class="popup-message">
+      <div class="success-top">
+        <img src="./assets/images/icon-success-check.svg" class="success-icon" alt="success icon">
+        <p>Message Sent!</p>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+  </main>
+  
+</body>
+<script src="exp.js6"></script>
+</html>

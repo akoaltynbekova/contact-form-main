@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+  }
+  
+  :root {
+    /* Primary */
+  
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  
+  /* Neutral */
+  
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
+  --Green-dark: hsl(169, 73%, 14%);
+  }
+  
+  body {
+    background-color: var(--Green-200-lighter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* color: darkgray; */
+  }
+  
+  form {
+    /* border: 2px solid blue; */
+    margin: 30px 15px;
+    padding: 15px 0;
+    transition: ease 0.5s;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.20);
+  }
+  
+  section,header, footer, fieldset {
+    display: flex;
+    /* border: 1px solid green; */
+    margin: 0 25px 10px 25px;
+    transition: ease 0.5s;
+  }
+  
+  header {
+    margin-bottom: 0;
+  }
+  
+  label, legend {
+    /* border: 1px solid lime; */
+    font-size: 18px;
+    padding: 8px 0;
+  }
+  
+  .error-border{
+    border: 1px solid var(--Red);
+  }
+  
+  input, textarea {
+    margin: 0 8px;
+    padding: 8px 0;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--Grey-900-darker);
+  }
+  
+  input, textarea, button, label {
+    cursor: pointer;
+  }
+  
+  input:hover, textarea:hover, .radio-btn:hover {
+    border: 2px solid var(--Green-600-medium);
+  }
+  
+  input:focus, textarea:focus {
+    border: 2px solid var(--Green-600-medium);
+    outline: none;
+  }
+  
+  header {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 12px 0;
+  }
+  
+  .user-details, .user-email {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset {
+    display: flex;
+    /* border: 4px solid orange; */
+    flex-direction: column;
+    border: none;
+  }
+  
+  input[type="radio"], input[type="checkbox"] {
+    margin-right: 15px;
+  }
+  
+  
+  .radio-btn {
+    border: 1px solid var(--Grey-900-darker);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 8px 25px;
+    margin: 8px;
+  }
+  
+  div {
+    /* border: 4px solid pink; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    height: 220px;
+  }
+  
+  .consent {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .consent-box {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  span {
+    color: var(--Green-600-medium);
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: var(--Green-600-medium);
+    color: var(--White);
+    border: none;
+    transition: ease 0.4s;
+  }
+  
+  button:hover {
+    background-color: var(--Green-dark);
+  }
+  
+  /* ERROR HANDLING */
+  .error-name, .error-surname, .error-message, 
+  .error-email, .error-query, .error-consent {
+    color: var(--Red);
+    display: none;
+  }
+  
+  .error-query {
+    margin: 5px 0px 10px 15px;
+  }
+  
+  .error {
+    border: 2px solid var(--Red);
+  }
+  
+  /* pop up message */
+  .popup-message {
+    /* border: 1px solid blue; */
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 350px;
+    border-radius: 10px;
+    color: var(--White);
+    background-color: var(--Grey-900-darker);
+    display: none;
+  }
+  
+  .success-top {
+    flex-direction: row;
+    /* border: 1px solid orangered; */
+    margin-bottom: 10px;
+    align-items: center;
+  
+  }
+  
+  .success-icon {
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+  .success-top p {
+    font-weight: 700;
+  }
+  
+  
+  @media screen and (min-width: 755px) {
+    form {
+      width: 600px;
+    }
+  
+    .user-details{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    div {
+      width: 100%;
+    }
+  
+    fieldset {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .radio-btn {
+      /* padding: 0; */
+      width: 100%;
+    }
+  
+    textarea {
+      height: 100px;
+    }
+  
+    .popup-message {
+      left: 50%;
+      width: auto;
+    }
+  }
+  
+  
+  @media screen and (min-width: 900px) {
+    form {
+      width: 700px;
+    }
+  
+    
+  }
